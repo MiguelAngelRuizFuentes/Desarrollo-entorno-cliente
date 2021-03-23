@@ -1,0 +1,1 @@
+Leer el contenido JSON que proporciona la API https://jsonplaceholder.typicode.com/users para pintar en una tabla el id,nombre,apellidos e email de todas las personas que contiene este JSON.

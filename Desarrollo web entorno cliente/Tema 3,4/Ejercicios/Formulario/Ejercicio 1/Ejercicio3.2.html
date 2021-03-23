@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 Formularios</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script type="text/javascript">
+       
+       $(document).ready(function(){
+            $("#formulario").validate();
+       });
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Formulario de registro</h2>
+    <form action="Ejercicio3.2.html" id="formulario" method="get">
+        Nombre: <input type="text" name="nombre" required>
+        <br>
+        Apellidos: <input type="text" name="apellidos" required>
+        <br>
+        Email: <input type="email" name="email" required>
+        <br>
+        Direccion: <input type="text" name="direccion" required>
+        <br>
+        Contraseña: <input type="password" name="contraseña" required>
+        <br>
+        Pais:
+        <select required>
+            <option value="valor1" selected>España</option>
+            <option value="valor2">Francia</option>
+            <option value="valor3">Portugal</option>
+        </select>
+        <br>
+        Acepta las condiciones de uso: <input type="checkbox" name="condiciones" required checked>
+        <br>
+        <input type="submit" name="enviar" value="Enviando">
+    </form>
+
+
+</body></html>

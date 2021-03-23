@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 9.2.4</title>
+    </head>
+    <body>
+        
+        <button onclick="hola()">CrearCuentaBancaria</button>
+        <script>
+         function Banco (n,a,s){
+             this.nombre=n;
+             this.apellidos=a;
+             this.salario=s;
+             
+         };
+            
+        var cu = null;
+        var a = null;
+        var n = null;
+        var s = null;
+            
+        Banco.prototype.cuenta = function(n,a,s){
+
+            var x,txt = "";
+            for(x in cu){
+                txt+=cu[x]+"</br>";
+            };
+            document.write("Cuenta creada correctamente</br>");
+            //document.write(txt);
+            return txt;
+            
+            
+        };
+            
+        function hola(){
+            
+             
+            n = window.prompt("Dime tu nombre");
+            a = window.prompt("Dime tu apellido");
+            s = window.prompt("Dime tu salario");
+            s = parseInt(s);
+            
+            cu = new Banco(n,a,s);
+            
+            
+            //cu.cuenta(n,a,s);
+            document.write(cu.cuenta(n,a,s));
+               
+        };
+
+
+         
+       
+        //document.write(vol.altura);
+        //document.write(vol.volumen());
+        
+        </script>
+      
+        
+    </body>
+</html>

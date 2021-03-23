@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5</title>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            var enlaces = document.getElementsByTagName('a');
+            for (i in enlaces) {
+                //Le colocamos a cada enlace el mostrar ocultar
+                enlaces[i].onclick = mostrarOcultar;
+            }
+        }
+        //Creamos la funcion
+        function mostrarOcultar() {
+            var idEnlace = this.id;
+            //Recogemos en una variable el trozo de cadena del numero, para conseguir el id diferente de cada enlace
+            var trozos = idEnlace.split('_');
+            var numero = trozos[1];
+            var parrafo = document.getElementById('contenidos_' + numero);
+
+            //Hacemos un switch case para que cuando el parrafo display sea none, se puedan ocultar contenidos, y en caso de que sea en bloque, se puedan mostrar
+            switch (parrafo.style.display) {
+                case 'none':
+                    parrafo.style.display = 'block';
+                    this.innerHTML = 'Ocultar contenidos';
+                    break;
+                case 'block':
+                case '':
+                    parrafo.style.display = 'none';
+                    this.innerHTML = 'Mostrar contenidos';
+                    break;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <p id="contenidos_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a id="enlace_1" href="#">Ocultar contenidos</a>
+
+    <br>
+
+    <p id="contenidos_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a id="enlace_2" href="#">Ocultar contenidos</a>
+
+    <br>
+
+    <p id="contenidos_3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a id="enlace_3" href="#">Ocultar contenidos</a>
+</body>
+
+</html>

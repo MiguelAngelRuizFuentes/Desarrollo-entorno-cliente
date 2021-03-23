@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 10.5</title>
+    </head>
+    <body>
+        
+        <canvas id="canvas" width="200" height="300"></canvas>
+
+        <script>
+            
+          var canvas = document.getElementById('canvas');
+          var ctx = canvas.getContext('2d');
+
+          ctx.beginPath();
+          ctx.arc(75,75,50,0,Math.PI*2,true); // Círculo externo
+          ctx.moveTo(110,75);
+          ctx.arc(75,75,35,0,Math.PI,false);   // Boca (contra reloj)
+          ctx.moveTo(65,65);
+          ctx.arc(60,65,5,0,Math.PI*2,true);  // Ojo izquierdo
+          ctx.moveTo(95,65);
+          ctx.arc(90,65,5,0,Math.PI*2,true);  // Ojo derecho
+          ctx.stroke()  
+            
+          
+
+            
+           
+            
+        </script>
+      
+        
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="elementosTag">
+            <h3>Modificacion tamaño texto</h3>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the1500s, when an unknown printer íook a galley of type and scrambled
+            it to make a type specimen book
+            </p>
+            <p>
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout
+            </p>
+            <p>
+            There are many variations of passages of Lorem Ipsum available, but the
+            majority have suffered alteration in some form, by injected humour, or
+            randomised words which don't look even slightly believable
+            </p>
+            <p>
+            Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+            Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written
+            in 45 BC
+            </p>
+        </div>
+       
+        <span>Seleccionar Tamaño de la fuente:</span>
+        <select id="cboSize">
+            <option value="10">Pequeña</option>
+            <option value="20">Mediana</option>
+            <option value="40">Grande</option>
+        </select>
+        <script>
+            document.getElementById("cboSize").addEventListener('click',modificarSize,false);
+
+            function modificarSize(){
+                var n = document.getElementById('cboSize').value;
+                document.getElementById('elementosTag').style.fontSize = n;
+            }
+
+        </script>    
+    </body>
+</html>

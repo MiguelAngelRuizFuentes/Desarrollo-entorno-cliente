@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <div id="elementosTag">
+        <h3>Modificacion tamaño texto</h3>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the1500s, when an unknown printer íook a galley of type and scrambled
+            it to make a type specimen book
+        </p>
+        <p>
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout
+        </p>
+        <p>
+            There are many variations of passages of Lorem Ipsum available, but the
+            majority have suffered alteration in some form, by injected humour, or
+            randomised words which don't look even slightly believable
+        </p>
+        <p>
+            Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+            Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written
+            in 45 BC
+        </p>
+    </div>
+    <span>Seleccionar Tamaño de la fuente:</span>
+    <!--    <select id="cboSize" onchange="cambio()">-->
+    <select id="cboSize">
+        <option value="10%">Muy Pequeña</option>
+        <option value="small">Pequeña</option>
+        <option value="medium">Mediana</option>
+        <option value="large">Grande</option>
+        <option value="150%">Extra Grande</option>
+    </select>
+    <select id="cboColor">
+        <option value="red">Rojo</option>
+        <option value="black">Negro</option>
+        <option value="green">Verde</option>
+        <option value="purple">Morado</option>
+        <option value="pink">Rosa</option>
+        <option value="blue">Azul</option>
+    </select>
+    <!--    Si queremos que vaya con el boton, descomentamos la linea siguiente, y ponemos en la funcion el nombre de esta-->
+    <!--    <button id="actualizar" onClick="modificarSize();">Cambiar</button>-->
+    <script type="text/javascript">
+        document.getElementById("cboSize").addEventListener('change', modificarSize, false);
+
+        function modificarSize() {
+
+            //Lo podemos cambiar por this
+            var opcion = this.value;
+            //var opcion = document.getElementById("cboSize").value;
+            //                console.log(opcion);
+
+            //            if (opcion == 1) {
+            //                document.getElementById("elementosTag").style.fontSize = "small";
+            //            }
+            //            if (opcion == 2) {
+            //                document.getElementById("elementosTag").style.fontSize = "medium";
+            //            }
+            //            if (opcion == 3) {
+            //                document.getElementById("elementosTag").style.fontSize = "large";
+            //            }
+            //Tambien se puede hacer asi
+            //            document.getElementById("elementosTag").setAttribute("style", "font-size:" + opcion);
+            document.getElementById("elementosTag").style.fontSize = opcion;
+        }
+        document.getElementById("cboColor").addEventListener('change', modificarColor, false);
+
+        function modificarColor() {
+
+            //Lo podemos cambiar por this
+            var opcion = this.value;
+
+            //Las dos siguientes opciones son validas, pero al ponerla de la segunda, si cambias la letra y pones
+            //un nuevo color, no se reinician las opciones elegidas
+            //            document.getElementById("elementosTag").setAttribute("style", "color:" + opcion);
+            document.getElementById("elementosTag").style.color = opcion;
+        }
+    </script>
+</body></html>

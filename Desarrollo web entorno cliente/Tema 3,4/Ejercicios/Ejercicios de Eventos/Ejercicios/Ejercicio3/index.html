@@ -1,0 +1,117 @@
+<html>
+     <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 3x02</title>
+</head>
+
+<body>
+
+    <div>
+        <h3>Lista dinámica</h3>
+        <ul id="lista"></ul>
+        <hr/>
+    </div>
+    <span>Nuevo Texto</span>
+    <input type="text" name="nombre" id="nuevoelemento">
+    <button id="actualizar" onClick="addItemsLista();"> Añadir </button>
+    <script>
+        //Creamos una variable para contener el id de cada lista que añadimos
+        var i = 0;
+
+        //Creamos la funcion de añadir items a la lista
+        function addItemsLista() {
+            //Recogemos en la variable, el contenido que contiene el elemento tipo texto
+            var contenido = document.getElementsByName("nombre")[0].value;
+            //Creamos el elemento lista
+            var lista = document.createElement("li");
+            //Creamos el nodo tipo texto de cada nodo hijo de la lista
+            var textoLista = document.createTextNode(contenido);
+            //Creamos la imagen 
+            var img = document.createElement('img');
+            //Añadimos el atributo src a la imagen
+            img.setAttribute("src", 'delete_40623.png');
+            //Le añadimos un atributo para poder hacer una funcion con el icono
+            img.setAttribute("onClick", 'borrado()');
+            //Le añadimos un atributo que será el nuevo id para cada elemento de la lista
+            img.setAttribute("id", i);
+            //Añadimos la imagen al elemento de la lista
+            lista.appendChild(img);
+            //Añadimos el texto al elemento de la lista
+            lista.appendChild(textoLista);
+            //Relaccionamos el elemento con la lista, haciendo que sea su nuevo hijo
+            document.getElementById("lista").appendChild(lista);
+            //Sumamos uno a la id, para que el id de un nuevo elemento de la lista, no aplaste al id del anterior elemento
+            i++;
+        }
+
+        //Creamos la funcion de borrar
+        function borrado() {
+            //Creamos una ventana emergente con el siguiente mensaje
+            confirm("¿Seguro que quieres cerrarlo?");
+            //Obtiene el elemento id
+            var id = event.target.id;
+            //Creamos una variable para recoger el elemento que se ha seleccionado para borrarlo
+            var borrar = document.getElementById(id);
+            //Removemos de la lista el hijo con el id seleccionado
+            lista.removeChild(lista.childNodes[id]);
+        }
+    </script>
+<!--    
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ej3</title>
+        <meta charset="utf-8">
+        <style>
+            img {
+                width: 15px;
+                height: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="lista">
+            <h3>Lista dinámica</h3>
+            <ul></ul>
+            <hr/>
+        </div>
+        <span>Nuevo Texto</span>
+        <input type="text" id="nuevoelemento">
+        <button id="actualizar" > Añadir </button>
+
+        <script>
+            document.getElementById("lista").getElementsByTagName('ul')[0].id="listanoordenada";
+            document.getElementById("actualizar").addEventListener("click",addItemsLista);
+            document.getElementById("nuevoelemento").addEventListener("keypress",function(e){
+                if (e.keyCode === 13) {
+                    //document.getElementById("actualizar").click();
+                    addItemsLista();
+                }
+            });
+            function addItemsLista() {
+                var longitud=document.getElementById("listanoordenada").children.length;
+                //console.log("LISTA SIN AÑADIDO: "+longitud);
+                var val=document.getElementById("nuevoelemento").value;
+                var txt=document.createTextNode(" "+val);
+                var img=document.createElement("IMG");
+                img.src="imagen.png";
+                img.addEventListener("click",function(){
+                    var r=window.confirm("Quiere borrar este elemento?");
+                    if(r){this.parentNode.remove()};
+                
+                });
+                var elm = document.createElement("LI"); 
+                elm.appendChild(img);
+                elm.appendChild(txt); 
+                //console.log(elm);
+                document.getElementById("listanoordenada").appendChild(elm);
+                //console.log("LISTA CON AÑADIDO: "+longitud);
+                document.getElementById("nuevoelemento").value="";
+            }
+
+            
+
+        </script>
+    </body>
+</html>-->
+</body></html>

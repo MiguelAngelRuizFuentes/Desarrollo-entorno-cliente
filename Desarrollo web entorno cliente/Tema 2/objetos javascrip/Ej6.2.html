@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form>
+  			<input type="button" value="Abir ventana" onclick="abirVentana()">
+  			<input type="button" value="Cerrar ventana" onclick="cerrarVentana()">
+		</form>
+		<script type="text/javascript">
+			var miventana;
+			function abirVentana(){
+  				 miventana = window.open("","miventana","width=400,height=200"); 
+  				 
+			}
+			function cerrarVentana(){
+  				miventana.close(); 
+			}
+		</script>
+
+	</body>
+</html>

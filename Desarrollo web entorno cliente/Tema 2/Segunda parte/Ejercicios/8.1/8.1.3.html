@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>08 - arrays</title>
+	<meta name="author" content="francesc ricart"/>
+</head>
+<body>
+
+<script>
+	var miArray=new Array();
+    miArray[0]=200;
+    miArray[1]=40;
+    miArray[2]=400;
+    miArray[3]=40;
+    miArray[4]=40;
+    var suma = 0;
+    
+    for(var i = 0;i<=miArray.length;i++){
+        var comprobar = miArray[i];
+        for(var j = 1;j<=miArray.length;j++){
+            var comprobarj = miArray[j];
+            if(comprobar==comprobarj){
+                suma++;
+            }
+            if(suma>1){
+                 miArray.splice(j,1);
+            }
+            
+        }
+        
+    }
+        
+        
+    for(var i = 0;i<miArray.length;i++){
+        document.write("</br>"+miArray[i]+"</br>");
+    }
+        
+    /*
+    miArray = miArray.filter((item,index)=>{
+      return miArray.indexOf(item) === index;
+         })
+    
+    
+     document.write(miArray);*/
+    
+     
+        
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>08 - arrays</title>
+	<meta name="author" content="francesc ricart"/>
+</head>
+<body>
+
+<script>
+	var fruta  = ["Plátano","naranja","manzana"];
+	
+	// 1.- Muestra el contenido del array por pantalla y después la longitud del array separada por una barra "/"
+       for(var i = 0;i<fruta.length;i++){
+           document.write("La fruta es "+fruta[i]+"</br>");
+       }
+        document.write("Numero de frutas "+fruta.length);
+    // 2- Utiliza el método de array correcto para ordenar alfabeticamente el contenido del array y muestra el resultado por pantalla.
+       fruta.sort();
+        for(var i = 0;i<fruta.length;i++){
+           document.write("</br>"+fruta[i]+"</br>");
+       }
+    
+    // 3- Utiliza el método de array correcto para eliminar el último elemento del array fruta. Muestra el contenido del array por pantalla para confirmar que el elemento ha sido eliminado y después la longitud del array separada por una barra "/" ¿La longitud del array se ha modificado?
+    fruta.pop();
+    for(var i = 0;i<fruta.length;i++){
+           document.write(fruta[i]+"</br>");
+       }
+        document.write("Numero de frutas "+fruta.length+"</br>");
+    
+   
+	// 4- Utiliza el método correcto para añadir kiwi al array
+    
+    fruta.unshift("Kiwi");
+    for(var i = 0;i<fruta.length;i++){
+           document.write("</br>"+fruta[i]+"</br>");
+       }
+    
+    
+    
+	
+    	// 5- Utiliza el método correcto para eliminar naranja y kiwi de fruta.
+    fruta.splice(0,1);
+    fruta.splice(1,1);
+    for(var i = 0;i<fruta.length;i++){
+           document.write(fruta[i]+"</br>");
+       }
+    
+    
+    
+        
+</script>
+</body>
+</html>

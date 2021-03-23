@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 Formularios</title>
+
+    <script type="text/javascript">
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Validación</h2>
+    <p>Introduce los datos y pulsa Comprobar</p>
+    <form action="index.html" method="get">
+        <!--Para la validacion del dni-->
+        DNI: <input type="text" name="dni" placeholder="00.000.000-X" required pattern="^[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[A-Z]$">
+        <br>
+        <!--Para la validacion del nombre, con el signo mas, ponemos que sea mas de una letra, por lo que seria una palabra, los corchetes con el espacio seria para tener un espacio-->
+        Nombre: <input type="text" name="nombre" placeholder="Miguel Angel Ruiz Fuentes" required pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$">
+        <br>
+        <!--Para la validacion de la fecha-->
+        Fecha de nacimiento: <input type="date" name="fecha" required pattern="">
+        <br>
+        <!--Para la validacion del email-->
+        Email: <input type="text" name="email" placeholder="miguel@gmail.com" required pattern="^[a-zA-Z0-9]+@[gmail]+\.[a-zA-Z]+">
+        <br>
+        <!--Para la validacion de la pagina, la s es opcional, la w que se repita 3 veces, luego el nombre de la pagina, un punto, y la terminacion-->
+        Página Web: <input type="text" name="pagina" placeholder="http(s)://www.nombre.es/com" required pattern="^(http(s)?://)+([w]{3}[.])+[a-z0-9]+[.][a-z]{2,3}$">
+        <br>
+        <!--Para la validacion de la contraseña, cualquier caracter individual excepto el salto de linea, repetido de 8 a 10 veces-->
+        Contraseña: <input type="password" name="contraseña" required pattern="^.{8,10}$">
+        <br>
+        <input type="submit" name="comprobar" value="Comprobar">
+    </form>
+
+
+</body>
+
+</html>

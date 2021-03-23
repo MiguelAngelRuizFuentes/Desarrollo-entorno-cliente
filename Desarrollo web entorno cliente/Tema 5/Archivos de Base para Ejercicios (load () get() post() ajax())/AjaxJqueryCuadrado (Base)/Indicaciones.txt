@@ -1,0 +1,1 @@
+Implementar una aplicación que calcule el cuadrado de un número que ingresamos por teclado. La operación se realiza en el servidor, le enviamos los datos mediante la función de jQuery $.ajax

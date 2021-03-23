@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Lista de Tareas Pendientes</title>
+        <style>
+            
+            *{box-sizing:border-box;padding:0;margin:0;}
+            #container{
+                width:600px;
+                padding:2%;
+                border:1px solid #000;
+                border-radius:10px;
+                background-color:#f0f0f0;
+                margin:auto;
+            }
+            
+            #container p{
+                font-style:italic;
+                margin:20px auto;
+            }
+            
+            label{
+                display:block;
+                font-weight:bold;
+            }
+            input{
+                display:inline-block;
+                width:49%;
+                margin:20px auto;
+            }
+            
+        </style>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+
+    </head>
+    <body onload="alert( 'Pagina cargada');">
+       <div id="container">
+        <form action="#">
+            <label for="anadir">Mi lista de Tareas Pendientes:</label>
+            <input type="text" name="anadir" id="anadir">
+            <input type="button" id="btnAnadir" value="Añadir a la lista">
+        </form>    
+        
+        <ul id="listaTareas"></ul>
+        
+        <p>Nota: Puedes eliminar elementos de la lista haciendo doble click sobre ellos</p>
+       </div>
+
+    <script>
+
+
+        function cargada () {
+            window.onload="true";
+            if(window.onload){
+                return true;
+            }
+            return false;
+        }
+
+        
+        $( function() {
+
+            //Crear el articulo
+            $("#btnAnadir").click(function(){
+                var texto = $("#anadir").val();
+                $("#listaTareas").append("<ul>"+texto+"</ul></br>");
+
+            });
+
+            $('ul').on("dblclick", function(e){
+                e.preventDefault();  //Evito que marque las palabras
+                $(this).hide();
+            });
+
+
+            /*$("ul").click(function(){
+                var url = $(this).attr("text");
+                $("#listaTareas").hide(url);
+                return false;
+            });*/
+
+
+
+        });
+
+        function cambiar(evt){
+            if(evt.keyCode == 13){
+                var texto = $("#anadir").val();
+                $("#listaTareas").append("<ul>"+texto+"</ul></br>");
+
+            }
+        }
+
+        /*function borrado() {
+            //Creamos una ventana emergente con el siguiente mensaje
+            confirm("¿Seguro que quieres cerrarlo?");
+            //Obtiene el elemento id
+            var id = event.target.id;
+            //Creamos una variable para recoger el elemento que se ha seleccionado para borrarlo
+            var borrar = document.getElementById(id);
+            //Removemos de la lista el hijo con el id seleccionado
+            $("#listaTareas").removeChild( $("#listaTareas").childNodes[id]);
+        }*/
+
+                
+    </script>
+    </body>
+</html>

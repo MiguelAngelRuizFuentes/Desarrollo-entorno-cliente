@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 6.1.4</title>
+    </head>
+    <body>
+        
+        <script>
+            var ventana= null;
+            var ancho = 100;
+            var alto = 100;
+            var x = 50;
+            
+            function acciónAlPulsar(){
+                ventana =window.open( "", "ventana1", "height="+alto+",width="+ancho+",left=300,top=300" );
+            }
+            function cambiar(){
+                ancho+=x;
+                alto+=x;
+                ventana.resizeTo(ancho, alto);
+                ventana.focus();
+            }
+        </script>
+        
+        <form>
+        <input type="button" value="Open Window" onclick="acciónAlPulsar()">
+        </form>
+        <form>
+        <input type="button" value="redimencionar" onclick="cambiar()">
+        </form>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+  <head>
+      <title>10.11</title>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="500"></canvas>
+ 
+    <script type="text/javascript">
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        texto="Texto en canvas usando JavaScrip"; //texto de prueba
+        texto1="StrokeText";
+        texto2="StrokeText Rojo";
+        texto3="fillText";
+        texto4="fillText Amarillo";
+        ctx.beginPath() //iniciar ruta
+        ctx.strokeStyle="black"; //color externo
+        ctx.fillStyle="black"; //color de relleno
+        ctx.font="bold 20px arial"; //estilo de texto
+        ctx.fillText(texto,10,30); //texto con método fill
+        ctx.strokeText(texto1,10,80); //texto con método stroke
+        ctx.strokeStyle="red"; //color externo
+        ctx.strokeText(texto2,120,80); //texto con método stroke
+        ctx.fillText(texto3,10,120); //texto con método fill
+        ctx.fillStyle="yellow"; //color de relleno
+        ctx.fillText(texto4,80,120); //texto con método fill
+        
+        
+        
+
+   </script>
+  
+ </body>
+</html>

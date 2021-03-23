@@ -1,0 +1,54 @@
+<html> 
+    <head> 
+        <title>Uso del punto 5. Creación y Modificación de Elementos</title> 
+    </head> 
+    <body> 
+        <script>
+            //Realiza un script que usando las herramientas del DOM, cree los siguientes nodos: 
+
+           // - Crea tres elementos nuevos: p, b, br 
+
+            var nuevop = document.createElement("p");
+            var nuevob = document.createElement("b");            
+            var nuevobr = document.createElement("br");
+          
+           // - Asignar un nuevo atributo title al elemento P creado. 
+
+           nuevop.setAttribute("title", "Parrafo cambiado desde js");
+
+            //- Crea los textos: 
+
+            //1.	'Con JavaScript se ' 
+            var texto1 =document.createTextNode("Con JavaScript se");
+
+            //2. 'pueden realizar ' 
+            var texto2 =document.createTextNode(" pueden realizar");
+
+            //3. 'un montón'
+            var texto3 =document.createTextNode(" un monton");
+
+            //4. ' de cosas sobre el documento.'
+            var texto4 =document.createTextNode(" de cosas sobre el documento.");
+
+
+            //- Añade al elemento B los nodos de texto 2, elemento BR y texto 3. 
+            nuevob.appendChild(texto2);
+            nuevob.appendChild(nuevobr);
+            nuevob.appendChild(texto3);
+
+
+
+            //- Añade al elemento p los nodos de texto 1, elemento B y texto 4. 
+            nuevop.appendChild(texto1);
+            nuevob.appendChild(texto4);
+
+
+
+            document.body.appendChild(nuevop);
+            document.body.appendChild(nuevob);
+            document.body.appendChild(nuevobr);
+
+        </script>
+    </body> 
+</html> 
+

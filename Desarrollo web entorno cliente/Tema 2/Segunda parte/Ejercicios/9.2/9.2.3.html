@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 9.2.3</title>
+    </head>
+    <body>
+        
+        <script>
+         function Cilindro (altura,radio){
+             this.altura=altura;
+             this.radio=radio;
+             
+         }
+            
+
+         Cilindro.prototype.volumen = function(){
+            return this.altura*3.14*Math.pow(this.radio, 2);
+         };
+
+
+         
+            
+            
+        var a = window.prompt("Dime una altura");
+        var b = window.prompt("Dime un radio");
+        a = parseInt(a);
+        b = parseInt(b);
+                
+        var vol = new Cilindro(a,b);
+        //document.write(vol.altura);
+        document.write(vol.volumen());
+        
+        </script>
+        
+      
+        
+    </body>
+</html>

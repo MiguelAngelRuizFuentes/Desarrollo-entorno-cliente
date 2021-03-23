@@ -1,0 +1,53 @@
+!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 9.2.2</title>
+    </head>
+    <body>
+        
+        <script>
+            
+            var alumno ={
+                nombre:"Juan",
+                apellido:"Ramirez",
+                edad:25,
+                clase:"2A"
+            };
+            var x,txt = "";
+            for(x in alumno){
+                txt+=alumno[x]+"</br>";
+            };
+            document.write(txt);
+            
+            
+            document.write("--------------------------------------------------</br>");
+            
+            document.write(alumno.nombre+"</br>");
+            document.write(alumno.apellido+"</br>");
+            document.write(alumno.clase+"</br>");
+            document.write(alumno.edad+"</br>");
+
+            
+            document.write("--------------------------------------------------</br>");
+            
+            
+            var miarray = Object.values(alumno);
+            document.write(miarray+"</br>");
+            
+            document.write("--------------------------------------------------</br>");
+            
+            var miString = JSON.stringify(alumno);
+            document.write(miString);
+
+            
+                        
+
+            
+        
+            
+        </script>
+        
+      
+        
+    </body>
+</html>

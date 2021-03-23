@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 10.7</title>
+    </head>
+    <body>
+        
+        <canvas id="canvas" width="900" height="600"></canvas>
+
+        <script>
+            
+       
+        var canvas = document.getElementById('canvas');
+ 
+        var ctx = canvas.getContext('2d');
+
+        for(var i=0;i<4;i++){
+          for(var j=0;j<3;j++){
+            ctx.beginPath();
+            var x              = 25+j*50;               // Coordenada x
+            var y              = 25+i*50;               // Coordenada y
+            var radio         = 20;                    // Radio del arco
+            var startA     = 0;                     // Punto inicial del círculo
+            var endA       = Math.PI+(Math.PI*j)/2; // Punto final del círculo
+            var sentido  = i%2==0 ? false : true; // Sentido de las manecillas del reloj y contrario a ellas
+
+            ctx.arc(x, y, radio, startA, endA, sentido);
+
+            if (i>1){
+              ctx.fill();
+            } else {
+              ctx.stroke();
+            }
+          }
+        }
+
+
+           
+            
+        </script>
+      
+        
+    </body>
+</html>

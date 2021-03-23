@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function acciónAlPulsar(){
+  				 window.scroll(0,10)
+			}
+			//el otro ej
+			function bajarmas(){
+  				 window.scroll(0,100)
+			}
+
+		</script>
+		<form>
+  			<input type="button" value="bajar" onclick="acciónAlPulsar()">
+  			<input type="button" value="bajar mas"  onclick="bajarmas()">
+		</form>
+
+		<h1>Palabras reservadas</h1><br>
+		<hr><hr><br>
+		<h3>No se pueden usar palabras reservadas</h3><br>
+		<hr><hr><br>
+		abstract
+Se utilizan para implementar una abstracción en Java. Un método sin definición debe declararse como abstracto y la clase que lo contiene debe declararse como abstracto. Las clases abstractas no pueden ser instanciadas. Los métodos abstractos deben ser implementados en las subclases. La palabra clave abstract no se puede utilizar con variables o constructores. Tenga en cuenta que no se requiere que una clase abstracta tenga un método abstracto en absoluto.<br>
+
+assert
+Assert describe un predicado (una declaración de verdadero / falso) colocado en un programa Java para indicar que el desarrollador piensa que el predicado siempre es verdadero en ese lugar. Si una aserción se evalúa como falsa en tiempo de ejecución, se produce un error de aserción, que normalmente hace que la ejecución se anule. Opcionalmente habilitar por el método ClassLoader.<br>
+
+boolean
+Define una variable booleana para los valores "true" o "false" solamente. Por defecto, el valor del tipo primitivo booleano es falso. Esta palabra clave también se usa para declarar que un método devuelve un valor del tipo primitivo booleano.<br>
+
+break
+Se utiliza para finalizar la ejecución en el cuerpo del bucle actual.<br>
+
+byte
+La palabra clave byte se utiliza para declarar un campo que puede contener un entero de complemento de dos con signo de 8 bits.<br> Esta palabra clave también se utiliza para declarar que un método devuelve un valor del byte tipo primitivo.<br>
+
+case
+Una declaración en el bloque de conmutación se puede etiquetar con una o más etiquetas de case.<br> La instrucción switch evalúa su expresión, luego ejecuta todas las declaraciones que siguen la etiqueta de caso correspondiente.<br>
+
+catch
+Se usa junto con un bloque de prueba y un bloque finalmente opcional.<br> Las declaraciones en el bloque catch especifican qué hacer si el bloque try lanza un tipo específico de excepción.<br>
+
+char
+Define una variable de carácter capaz de contener cualquier carácter del conjunto de caracteres del archivo fuente Java.<br>
+
+class
+Un tipo que define la implementación de un tipo particular de objeto.<br> Una definición de clase define los campos de instancia y clase, los métodos y las clases internas, además de especificar las interfaces que implementa la clase y la superclase inmediata de la clase.<br> Si la superclase no se especifica explícitamente, la superclase es implícitamente Object.<br> La palabra clave de clase también se puede utilizar en el formulario Class.<br>class para obtener un objeto Class sin necesidad de una instancia de esa clase.<br> Por ejemplo, String.<br>class se puede usar en lugar de hacer una nueva String ().<br> GetClass ().<br>
+
+continue
+Se utiliza para reanudar la ejecución del programa al final del cuerpo del bucle actual.<br> Si le sigue una etiqueta, continúe con la ejecución de reanudación al final del cuerpo del bucle etiquetado adjunto.<br>
+
+default
+La palabra clave default se puede usar opcionalmente en una instrucción de cambio para etiquetar un bloque de instrucciones que se ejecutarán si ningún caso coincide con el valor especificado; ver interruptor.<br> Alternativamente, la palabra clave predeterminada también se puede utilizar para declarar valores predeterminados en una anotación de Java.<br> Desde Java 8 en adelante, la palabra clave predeterminada se puede usar para permitir que una interfaz proporcione una implementación de un método.<br>
+
+do
+La palabra clave do se usa junto con while para crear un bucle do-while, que ejecuta un bloque de sentencias asociadas con el bucle y luego prueba una expresión booleana asociada con while.<br> Si la expresión se evalúa como verdadera, el bloque se ejecuta de nuevo; esto continúa hasta que la expresión se evalúa como falsa.<br>
+
+double
+La palabra clave double se usa para declarar una variable que puede contener un número de punto flotante IEEE 754 de doble precisión de 64 bits.<br> Esta palabra clave también se usa para declarar un método que devuelve un valor del tipo primitivo double.<br>
+
+else
+La palabra clave else se usa junto con if para crear una sentencia if-else, que pruebe una expresión booleana; si la expresión se evalúa como verdadera, se evalúa el bloque de instrucciones asociadas con el if; si se evalúa como falso, se evalúa el bloque de declaraciones asociadas con else.<br>
+
+enum (agregada en J2SE 5.<br>0)
+Una palabra clave de Java utilizada para declarar un tipo enumerado.<br> Las enumeraciones amplían la clase base Enum.<br>
+
+exports
+Se utiliza en java modular para exportar un paquete con un módulo.<br> Esta palabra clave sólo está disponible en Java 9 y versiones posteriores.<br>
+
+extends
+Se utiliza en una declaración de clase para especificar la superclase; utilizado en una declaración de interfaz para especificar una o más superinterfaces.<br> La clase X extiende la clase Y para agregar funcionalidad, ya sea agregando campos o métodos a la clase Y, o reemplazando los métodos de la clase Y.<br> Una interfaz Z extiende una o más interfaces al agregar métodos.<br> Se dice que la clase X es una subclase de la clase Y; Se dice que la interfaz Z es una subinterfaz de las interfaces que se extiende.<br> También se usa para especificar un límite superior en un parámetro de tipo en Genéricos.<br>
+
+final
+Defina una entidad una vez que no se puede cambiar ni derivar de más adelante.<br> Más específicamente: una clase final no puede ser subclasificada, un método final no puede ser anulado, y una variable final puede aparecer como máximo una vez como una expresión de la mano izquierda en un comando ejecutado.<br> Todos los métodos en una clase final son implícitamente finales.<br>
+
+finally
+Se utiliza para definir un bloque de instrucciones para un bloque definido previamente por la palabra clave try.<br> El bloque finally se ejecuta después de que la ejecución sale del bloque try y de cualquier cláusula catch asociada sin importar si se lanzó o capturó una excepción, o si se ejecutó el método de izquierda en medio de los bloques try o catch usando la palabra clave return.<br>
+
+float
+La palabra clave flotante se usa para declarar una variable que puede contener un número punto flotante IEEE 754 de precisión simple de 32 bits.<br> Esta palabra clave también se usa para declarar que un método devuelve un valor del tipo primitivo float.<br>
+
+for
+La palabra clave for se utiliza para crear un bucle for, que especifica una inicialización variable, una expresión booleana y un incremento.<br> La inicialización de la variable se realiza primero y luego se evalúa la expresión booleana.<br> Si la expresión se evalúa como verdadera, el bloque de instrucciones asociado con el bucle se ejecuta, y luego se realiza el incremento.<br> La expresión booleana se evalúa de nuevo; esto continúa hasta que la expresión se evalúa como falsa.<br> A partir de J2SE 5.<br>0, la palabra clave for también se puede usar para crear el llamado "bucle mejorado para", que especifica una matriz o un objeto iterable; Cada iteración del bucle ejecuta el bloque asociado de declaraciones utilizando un elemento diferente en la matriz o Iterable.<br>
+
+if
+La palabra clave if se usa para crear una sentencia if, que prueba una expresión booleana; si la expresión se evalúa como verdadera, se ejecuta el bloque de instrucciones asociadas con la instrucción if.<br> Esta palabra clave también se puede utilizar para crear una sentencia if-else; ver otra cosa.<br>
+
+implements
+Incluido en una declaración de clase para especificar una o más interfaces implementadas por la clase actual.<br> Una clase hereda los tipos y métodos abstractos declarados por las interfaces.<br>
+
+import
+Se usa al comienzo de un archivo fuente para especificar clases o paquetes completos de Java para consultarlos más adelante sin incluir sus nombres de paquete en la referencia.<br> Desde J2SE 5.<br>0, las declaraciones de importación pueden importar miembros estáticos de una clase.<br>
+
+instanceof
+Un operador binario que toma una referencia de objeto como su primer operando y una clase o interfaz como su segundo operando y produce un resultado booleano.<br> El instanceofoperator evalúa como verdadero si y solo si el tipo de tiempo de ejecución del objeto es compatible con la clase o la interfaz.<br>
+
+int
+La palabra clave int se utiliza para declarar una variable que puede contener un entero de complemento a dos con signo de 32 bits.<br> Esta palabra clave también se usa para declarar que un método devuelve un valor del tipo primitivo int.<br>
+
+interface
+Se utiliza para declarar un tipo especial de clase que solo contiene métodos abstractos o predeterminados, campos constantes (final estático) e interfaces estáticas.<br> Más tarde puede implementarse por clases que declaran la interfaz con la palabra clave implementa.<br> Como la herencia múltiple no está permitida en Java, las interfaces se utilizan para evitarla.<br> Una interfaz se puede definir dentro de otra interfaz.<br>
+
+long
+La palabra clave larga se usa para declarar una variable que puede contener un entero de complemento a dos con signo de 64 bits.<br> Esta palabra clave también se usa para declarar que un método devuelve un valor del tipo primitivo long.<br>
+
+module
+La palabra clave del módulo se utiliza para declarar un módulo dentro de una aplicación Java.<br> Esta palabra clave solo está disponible en Java 9 y versiones posteriores.<br>
+
+native
+Se usa en declaraciones de métodos para especificar que el método no se implementa en el mismo archivo fuente de Java, sino en otro idioma.<br>
+
+new
+Se utiliza para crear una instancia de una clase o un objeto de matriz.<br> El uso de palabras clave para este fin no es completamente necesario (como lo ejemplifica Scala), aunque sirve para dos propósitos: permite la existencia de un espacio de nombres diferente para los métodos y nombres de clase, define estática y localmente que se crea un objeto nuevo, y de qué tipo de tiempo de ejecución es (podría decirse que introduce dependencia en el código).<br>
+
+package
+El package Java es un grupo de clases e interfaces similares.<br> Los paquetes se declaran con la palabra clave del paquete.<br>
+
+private
+La palabra clave privada se usa en la declaración de un método, campo o clase interna; Los miembros privados solo pueden ser accedidos por otros miembros de su propia clase.<br>
+
+protected
+La palabra clave protegida se usa en la declaración de un método, campo o clase interna; Los miembros protegidos solo pueden acceder a los miembros de su propia clase, las subclases de esa clase o las clases del mismo paquete.<br>
+
+public
+La palabra clave pública se usa en la declaración de una clase, método o campo; Los miembros de cualquier clase pueden acceder a clases públicas, métodos y campos.<br>
+
+requires
+Se utiliza para especificar las bibliotecas requeridas dentro de un módulo.<br> Esta palabra clave solo está disponible en Java 9 y versiones posteriores.<br>
+
+return
+Se utiliza para finalizar la ejecución de un método.<br> Puede ir seguido de un valor requerido por la definición del método que se devuelve al
+llamante.<br>
+
+short
+La palabra clave corta se usa para declarar un campo que puede contener un entero de complemento de dos con signo de 16 bits.<br> Esta palabra clave también se usa para declarar que un método devuelve un valor del tipo primitivo short.<br>
+
+static
+Se utiliza para declarar un campo, método o clase interna como un campo de clase.<br> Las clases mantienen una copia de los campos de clase independientemente de cuántas instancias existen de esa clase.<br> Staticalso se usa para definir un método como un método de clase.<br> Los métodos de clase están vinculados a la clase en lugar de a una instancia específica, y solo pueden operar en campos de clase.<br> (Las clases e interfaces declaradas como miembros estáticos de otra clase o interfaz son en realidad clases de nivel superior y no son clases internas).<br>
+
+strictfp (agregado en J2SE 1.<br>2)
+Una palabra clave de Java utilizada para restringir la precisión y el redondeo de los cálculos de punto flotante para garantizar la portabilidad.<br>
+
+super
+Herencia básicamente utilizada para lograr la vinculación dinámica o el polimorfismo en tiempo de ejecución en java.<br> Se utiliza para acceder a los miembros de una clase heredada por la clase en la que aparece.<br> Permite que una subclase acceda a métodos anulados y miembros ocultos de su superclase.<br> La palabra clave super también se usa para reenviar una llamada de un constructor a un constructor en la superclase.<br> También se usa para especificar un límite inferior en un parámetro de tipo en Genéricos.<br>
+
+switch
+La palabra clave switch se usa junto con case y default para crear una instrucción switch, que evalúa una variable, compara su valor con un caso específico y ejecuta el bloque de declaraciones asociadas con ese caso.<br> Si no se compara el valor, se ejecuta el bloque opcional etiquetado de forma predeterminada, si se incluye.<br>
+
+synchronized
+Se utiliza en la declaración de un método o bloque de código para adquirir el bloqueo mutex para un objeto mientras el hilo actual ejecuta el código.<br> Para los métodos estáticos, el objeto bloqueado es la clase de la clase.<br> Garantiza que, como máximo, un subproceso a la vez que opera en el mismo objeto ejecuta ese código.<br> El bloqueo mutex se libera automáticamente cuando la ejecución sale del código sincronizado.<br> Los campos, clases e interfaces no pueden ser declarados como sincronizados.<br>
+
+this
+Se utiliza para representar una instancia de la clase en la que aparece.<br>
+Esto se puede usar para acceder a los miembros de la clase y como referencia a la instancia actual.<br> La palabra clave también se usa para reenviar una llamada de un constructor en una clase a otro constructor en la misma clase.<br>
+
+throw
+Hace que se lance la instancia de excepción declarada.<br> Esto hace que la ejecución continúe con el primer controlador de excepciones de cierre declarado por la palabra clave catch para manejar un tipo de excepción compatible de asignación.<br> Si no se encuentra dicho controlador de excepciones en el método actual, entonces el método vuelve y el proceso se repite en el método de llamada.<br> Si no se encuentra un controlador de excepciones en ninguna llamada de método en la pila, entonces la excepción se pasa al controlador de excepciones no capturado del subproceso.<br>
+
+throws
+Se utiliza en las declaraciones de métodos para especificar qué excepciones no se manejan dentro del método, sino que se pasan al siguiente nivel superior del programa.<br> Todas las excepciones no detectadas en un método que no sean instancias de RuntimeException deben declararse utilizando la palabra clave throws.<br>
+
+transient
+Declara que un campo de instancia no es parte de la forma serializada predeterminada de un objeto.<br> Cuando un objeto se serializa, solo los valores de sus campos de instancia no transitorios se incluyen en la representación serial predeterminada.<br> Cuando un objeto se deserializa, los campos transitorios se inicializan solo a su valor predeterminado.<br> Si no se utiliza el formulario predeterminado, por ejemplo, cuando se declara una tabla serialPersistentFields en la jerarquía de clases, se ignoran todas las palabras clave transitorias.<br>
+
+try
+Define un bloque de sentencias que tienen manejo de excepciones.<br> Si se lanza una excepción dentro del bloque try, un bloque catch opcional puede manejar los tipos de excepción declarados.<br> Además, se puede declarar un bloque finalmente opcional que se ejecutará cuando la ejecución salga de las cláusulas try y catch, independientemente de si se lanza una excepción o no.<br> Un bloque try debe tener al menos una cláusula catch o un bloque finally.<br>
+
+void
+La palabra clave void se usa para declarar que un método no devuelve ningún valor.<br>
+
+volatile
+Se utiliza en declaraciones de campo para especificar que la variable se modifica de forma asíncrona mediante subprocesos que se ejecutan simultáneamente.<br> Los métodos, las clases y las interfaces no se pueden declarar volátiles, ni las variables o los parámetros locales.<br>
+
+while
+La palabra clave while se usa para crear un bucle while, que prueba una expresión booleana y ejecuta el bloque de sentencias asociadas con el bucle si la expresión se evalúa como verdadera; esto continúa hasta que la expresión se evalúa como falsa.<br> Esta palabra clave también se puede utilizar para crear un bucle do-while; ver hacer.<br>
+
+Palabras reservadas para valores literales:
+true, null, false
+Un valor literal booleano.<br> No son considerados palabras clave de Java, sino literales.<br> Ahora bien, tampoco se pueden utilizar como indentificadores.<br>
+
+Identificadores especiales:
+var
+Un identificador especial que no se puede usar como nombre de tipo (desde Java 10).<br>No usado
+
+const
+Aunque está reservado como palabra clave en Java, const no se usa y no tiene función.<br> Para definir constantes en Java, vea la palabra clave final.<br>
+
+goto
+Aunque reservado como una palabra clave en Java, goto no se usa y no tiene ninguna función.<br> Los paradigmas de programación son una forma de clasificar los lenguajes de programación según sus características.<br> Las lenguas se pueden clasificar en múltiples paradigmas.<br> Algunos paradigmas se ocupan principalmente de las implicaciones para el modelo de ejecución del lenguaje, como permitir efectos secundarios o si la secuencia de operaciones está definida por el modelo de ejecución.<br> Otros paradigmas se refieren principalmente a la forma en que se organiza el código, como agrupar un código en unidades junto con el estado que es modificado por el código.<br> Sin embargo, otros están relacionados principalmente con el estilo de la sintaxis y la gramática.<br>
+	</body>
+</html>

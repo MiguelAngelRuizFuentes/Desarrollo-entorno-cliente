@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 6.1.2</title>
+    </head>
+    <body>
+        
+        
+        <script>
+            var ventana= null;
+            function acciónAlPulsar(){
+                ventana =window.open( "https://www.google.es/", "ventana1", "height=200,width=400,left=300" );
+            }
+            function cerrar(){
+                ventana.close();
+            }
+        </script>
+        
+        <form>
+        <input type="button" value="Open Window" onclick="acciónAlPulsar()">
+        </form>
+        <form>
+        <input type="button" value="Close Window" onclick="cerrar()">
+        </form>
+        
+        
+    </body>
+</html>

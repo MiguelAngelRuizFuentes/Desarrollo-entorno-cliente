@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Titulo DOM</title>
+    </head>
+    <body>
+        <p>Parrafo DOM</p>
+        <p>Parrafo DOM segundo</p>
+        <p>Parrafo DOM tres</p>
+        <script>
+          
+        //Realiza un script que implemente lo siguiente: 
+
+        //- Indique mediante un alert el número de párrafos que contiene (etiquetas <p>). 
+            var parrafos = document.getElementsByTagName("p");
+            window.alert("El numero de parrafos es "+parrafos.length);
+
+        //- Muestre mediante un alert el contenido del tercer párrafo. 
+            window.alert("el contenido del tercer parrafo es "+parrafos[2].firstChild.nodeValue);
+            // Otra forma de hacerlo window.alert("el contenido del tercer parrafo es "+parrafos[2].childNodes[0].nodeValue);
+
+
+        //- Modifique el texto del segundo párrafo con “El párrafo segundo se ha modificado”. 
+            parrafos[1].textContent = "El párrafo segundo se ha modificado";
+            // Otra forma de hacerlo parrafos[1].firstChild.nodeValue = "El párrafo segundo se ha modificado";
+            // Otra forma de hacerlo parrafos[1].innerHTML = "El párrafo segundo se ha modificado";
+
+        //- Crea un nuevo párrafo en el que aparezca el texto “Párrafo cuatro, creado usando el DOM”. 
+            var nuervoParrafo = document.createElement("p");
+            var nuevoTexto =document.createTextNode("Párrafo cuatro, creado usando el DOM");
+            nuervoParrafo.appendChild(nuevoTexto);
+            document.body.appendChild(nuervoParrafo);
+
+
+         
+        </script>
+    </body>
+</html>

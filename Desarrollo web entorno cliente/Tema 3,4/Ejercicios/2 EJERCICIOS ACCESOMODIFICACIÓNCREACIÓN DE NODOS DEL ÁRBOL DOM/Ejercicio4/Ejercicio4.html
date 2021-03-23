@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Pagina sencilla</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <a href="www.google.com">Ir a google</a>
+        <p>Esta pagina es<strong> muy sencilla</strong> </p>
+        <hr>
+        <script>
+            var raiz = document.documentElement;
+            var nombre1 = raiz.nodeName;
+            var hijos = raiz.childNodes;
+            var cabecera = hijos[0].children;
+            var cuerpo = hijos[1].children;
+            document.write("El documento tiene un nodo de tipo "+nombre1+"<br>");
+            document.write("La raiz tiene "+hijos.length+" hijos <br>");
+
+            for(var i = 0;i<hijos.length;i++){
+                document.write("La raiz tiene un nodo de tipo "+hijos[i].nodeName+"<br>");
+            }
+
+            document.write("La cabecera tiene "+cabecera.length+" hijos <br>");
+
+            for(var i = 0;i<cabecera.length;i++){
+                document.write("La cabecera tiene un nodo de tipo "+cabecera[i].nodeName+"<br>");
+            }
+
+            document.write("El body tiene "+cuerpo.length+" hijos que son<br>");
+
+            //document.write("El body tiene " + document.body.children.length + " hijos que son: " + br + document.body.childNodes[1].nodeName + br + body.childNodes[3].nodeName + br + body.childNodes[5].nodeName + br + body.childNodes[7].nodeName + br);
+
+            
+            for(var i = 0;i<4;i++){
+                document.write(cuerpo[i].nodeName+"<br>");
+            }
+
+
+
+
+        </script>
+    </body>
+</html>

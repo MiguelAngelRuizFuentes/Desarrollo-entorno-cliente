@@ -1,0 +1,41 @@
+<html> 
+    <head> 
+        <title>Ejercicio 1</title> 
+    </head> 
+    <body> 
+
+        <button id="actualizar" onClick="addItemsLista();"> Añadir </button>
+
+        <script>
+
+        function addItemsLista() {
+
+            var nombre1 = window.prompt("Dime tu nombre");
+            var apellidos1 = window.prompt("Dime tus apellidos");
+            var direccion1 = window.prompt("Dime tu direccion");
+            var edad1 = window.prompt("Dime tu edad");
+
+            var cuentaCliente = {
+                nombre: nombre1,
+                apellidos: apellidos1,
+                direcccion: direccion1,
+                edad: edad1
+            };
+
+            window.alert("Usuario creado con exito");
+            document.write("Nombre: "+cuentaCliente.nombre+"</br>");
+            document.write("Apeliidos: "+cuentaCliente.apellidos+"</br>");
+            document.write("Direccion: "+cuentaCliente.direcccion+"</br>");
+            document.write("Edad: "+cuentaCliente.edad+"</br>");
+
+         
+        }
+
+
+
+          
+
+        </script>
+    </body> 
+</html> 
+

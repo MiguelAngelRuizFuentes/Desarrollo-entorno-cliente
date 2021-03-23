@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <h1 id="titulo">TITULO QUE VAMOS A OCULTAR</h1>
+
+    <p>Pulsa el boton que para mostrar o ocultar el titulo. <input id="botonTotal" type="button" value="Ocultar"></p>
+
+    <!--    Esto seria con dos botones-->
+
+    <!--
+    <button id="mostrar" type="button" onclick="mostrarTitulo();" style="display: none;">Mostrar</button>
+    <button id="ocultar" type="button" onclick="ocultarTitulo();" style="display: block;">Ocultar</button>
+-->
+
+
+    <script>
+        //Se puede hacer de ambas maneras
+
+        //        document.getElementById("mostrar").addEventListener('click', mostrarTitulo, false);
+        //        document.getElementById("ocultar").addEventListener('click', ocultarTitulo, false);
+        document.getElementById("botonTotal").addEventListener('click', cambiar, false);
+
+
+
+        function cambiar(ev) {
+            var h1 = document.getElementById("titulo");
+
+            if (h1.style.visibility == "hidden") {
+                h1.style.visibility = "visible";
+                this.value = "Ocultar";
+            } else {
+                h1.style.visibility = "hidden";
+                this.value = "Mostrar";
+            }
+
+        }
+
+        //Esto seria con dos botones
+
+        //        function mostrarTitulo() {
+        //            document.getElementById("divBonito").style.display = 'block';
+        //            document.getElementById("mostrar").style.display='none';
+        //            document.getElementById("ocultar").style.display = 'block';
+        //
+        //        }
+        //
+        //        function ocultarTitulo() {
+        //            document.getElementById("divBonito").style.display = 'none';
+        //            document.getElementById("ocultar").style.display='none';
+        //            document.getElementById("mostrar").style.display = 'block';
+        //        }
+    </script>
+</body></html>

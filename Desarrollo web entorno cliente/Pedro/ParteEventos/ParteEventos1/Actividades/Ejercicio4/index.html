@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio - 4</title>
+    <meta charset="utf-8">
+    <style>
+        table,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var table = document.createElement("table");
+        for (i = 0; i < 8; i++) {
+            var row = document.createElement("tr");
+            for (j = 0; j < 8; j++) {
+                var elm = document.createElement("td");
+                elm.style.backgroundColor = "white";
+                elm.addEventListener("click", function(e) {
+                    var col = this.style.backgroundColor;
+                    //console.log("col:"+col);
+                    //console.log("col=='white':"+col=="white");
+                    if (col == "white") {
+                        this.style.backgroundColor = "black";
+                    } else {
+                        this.style.backgroundColor = "white";
+                    }
+                })
+                row.appendChild(elm);
+            }
+            table.appendChild(row);
+        }
+        document.body.appendChild(table);
+
+    </script>
+</body>
+
+</html>

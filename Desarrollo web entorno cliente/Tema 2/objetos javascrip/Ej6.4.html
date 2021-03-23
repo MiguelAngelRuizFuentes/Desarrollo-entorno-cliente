@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form>
+  			<input type="button" value="Abir ventana" onclick="abirVentana()">
+  			<input type="button" value="redimensionar" onclick="Redimensionar()">
+		</form>
+		<script type="text/javascript">
+			var miventana;
+			var altura=100;
+			var anchura=100;
+			function abirVentana(){
+  				 miventana = window.open("","miventana","width="+altura+",height="+anchura+""); 
+  				 
+			}
+			function Redimensionar(){
+				altura+=50;
+				anchura+=50;
+				miventana.resizeBy(altura,anchura);
+				miventana.focus();
+			}
+		</script>
+	</body>
+</html>

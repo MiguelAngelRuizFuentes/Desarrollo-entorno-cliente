@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 2</title>
+    </head>
+    <body>
+        <script>
+            var fecha = new Date;
+            var dia = fecha.getDay();
+            var diasSemana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+            if(diasSemana[dia-1]=="sabado" || diasSemana[dia-1]=="domingo"){
+                document.write("Es un fin de semana");
+            }else{
+                document.write("No es un fin de semana");
+            }
+            document.write("</br>Año "+fecha.getFullYear()+" mes "+fecha.getMonth()+" dia "+fecha.getDate());
+
+            
+        </script>
+    </body>
+</html>

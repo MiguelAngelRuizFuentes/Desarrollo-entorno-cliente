@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1 Formularios</title>
+
+    <script type="text/javascript">
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Formulario de registro</h2>
+    <form action="index.html" method="get">
+        Nombre: <input type="text" name="nombre" required>
+        <br>
+        Apellidos: <input type="text" name="apellidos" required>
+        <br>
+        Email: <input type="email" name="email" required>
+        <br>
+        Direccion: <input type="text" name="direccion" required>
+        <br>
+        Fecha de nacimiento: <input type="date" name="fecha" required>
+        <br>
+        Hora actual: <input type="time" name="hora" required>
+        <br>
+        <!--Para que se pueda solo leer        -->
+        Codigo postal: <input type="text" name="cp" value="04006" required readonly>
+        <br>
+        Ciudad: <input type="text" name="ciudad" required>
+        <br>
+        Contraseña: <input type="password" name="contraseña" required>
+        <br>
+        Pais:
+        <select required>
+            <option value="valor1" selected>España</option>
+            <option value="valor2">Francia</option>
+            <option value="valor3">Portugal</option>
+        </select>
+        <br>
+        Observaciones:
+        <textarea type="text" name="observaciones" required></textarea>
+        <br>
+        Acepta las condiciones de uso: <input type="checkbox" name="condiciones" required checked>
+        <br>
+        <input type="submit" name="enviar" value="Enviando">
+        <input type="reset" name="limpiar" value="Restablecer" />
+    </form>
+
+
+</body></html>

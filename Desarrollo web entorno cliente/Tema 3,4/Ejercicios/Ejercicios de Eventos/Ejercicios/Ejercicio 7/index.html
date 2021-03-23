@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio - 7</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="client"></p>
+        <p id="screen"></p>
+        <p id="offset"></p>
+
+        <script>
+            document.addEventListener("mousemove",function(e){
+               var sX=e.screenX;
+               var sY=e.screenY;
+               var cX=e.clientX;
+               var cY=e.clientY;
+               var oX=e.offsetX;
+               var oY=e.offsetY;
+               document.getElementById("client").innerHTML="NAVEGADOR - X: "+cX+", Y: "+cY;
+               document.getElementById("screen").innerHTML="PANTALLA - X: "+sX+", Y: "+sY;
+               document.getElementById("offset").innerHTML="PAGINA - X: "+oX+", Y: "+oY;
+            });
+
+        </script>
+    </body>
+</html>

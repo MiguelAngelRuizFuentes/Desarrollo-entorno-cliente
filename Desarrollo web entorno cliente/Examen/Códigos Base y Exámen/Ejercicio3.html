@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1 Formularios</title>
+
+    <script type="text/javascript">
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Formulario de registro</h2>
+    <form method="POST" action="envio.html" onsubmit="return validar(this);" id="form">
+        Nombre: <input type="text" name="nombre" id="nombre">
+        <br>
+        Direccion: <input type="text" name="direccion" id="direccion">
+        <br>
+        Edad: <input type="text" name="edad" id="edad">
+        <br>
+        Email: <input type="text" name="email" placeholder="miguel@gmail.com" id="email">
+        <br>
+        Estudios:
+        <select id="opciones">
+            <option value="selec">- Selecciona un valor -</option>
+            <option value="valor1">ESO</option>
+            <option value="valor2">Bachillerato</option>
+            <option value="valor3">Grado</option>
+        </select>
+        <br>
+        Acepta las condiciones de uso: <input type="checkbox" onclick="agreesubmit(this)" name="condiciones" id="chec">
+        <br>
+        <input type="submit" name="enviar" value="Registrarse">
+    </form>
+
+    <script>
+
+    
+        function validar(e){
+        
+
+        //Validar que el usuario tiene mas de dos caracteres 
+        var nombre = document.getElementById("nombre").value;
+        if(nombre.length == 0 || nombre < 2){
+            alert("Escribe mas letras en el nombre");
+            comprobar = false;
+        }
+
+        //comprobamos que la direccion tiene mas de 10 caracteres
+        var direcccion = document.getElementById("direccion").value;
+        if( direcccion > 10){
+            alert("Escribe mas letras en la direccion");
+            comprobar = false;
+        }
+
+         //comprobamos que la edad sea un numero
+        var edad = document.getElementById("edad").value;
+        if( !edad.isNan()){
+            alert("La edad no es un numero");
+            comprobar = false;
+        }
+
+         //comprobamos el email
+         var email = document.getElementById("email").value;
+         function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        //selecionamos que haya alguna opcion selecionada
+        var checkbox = document.getElementById("opciones").selectedIndex;
+
+        if(checkbox == null || checkbox == 0){
+            alert("No has seleccionado ninguna opcion");
+            comprobar = false;
+        }
+
+        //comprobamos si el checkBox De condiciones y uso esta puesto
+
+        var checkobj
+
+        function agreesubmit(el){
+
+            checkobj=el
+
+            if (document.all||document.getElementById){
+
+                for (i=0;i<checkobj.form.length;i++){
+
+                var tempobj=checkobj.form.elements[i]
+
+                if(tempobj.type.toLowerCase()=="submit")
+
+                tempobj.disabled=!checkobj.checked
+
+                }
+
+            }
+
+        }
+        
+        
+
+
+    }
+
+ 
+    </script>
+
+
+</body></html>

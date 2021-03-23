@@ -1,0 +1,1 @@
+Leer el contenido XML que proporciona la API https://randomuser.me/api/?results=5&format=XML para pintar en una tabla el id,nombre,apellidos y edad de todas las personas que contiene este XML.

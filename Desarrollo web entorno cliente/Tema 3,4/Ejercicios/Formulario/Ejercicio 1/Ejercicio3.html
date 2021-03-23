@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 Formularios</title>
+
+    <script type="text/javascript">
+        function validarFormulario(evento) {
+            evento.preventDefault();
+            var usuario = document.getElementById('usuario').value;
+            if(usuario.length == 0) {
+                alert('No has escrito nada en el usuario');
+                return;
+            }
+            var clave = document.getElementById('clave').value;
+            if (clave.length == 0) {
+                alert('La clave no es válida');
+                return;
+            }
+            var isChecked = document.getElementById('op').checked;
+            if(isChecked.length > 2){
+                alert('Seleciona 2 elementos');
+                return;
+            }
+            this.submit();
+            }
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Formulario de registro</h2>
+    <form action="Ejercicio3.html" id="formulario" method="get">
+        Usuario: <input type="text" name="usuario">
+        <br>
+        Contraseña: <input type="password" name="clave">
+        <br>
+        Seleccione un valor:
+        <select required>
+            <option value="valor1">10</option>
+            <option value="valor2">20</option>
+            <option value="valor3">30</option>
+        </select>
+        <br>
+        <label for="test">Marca los valores por defecto
+        <br>
+            <input type="checkbox" name="op" id="op" value="op1">op1<br>
+            <input type="checkbox" name="op" id="op" value="op2">op2<br>
+            <input type="checkbox" name="op" id="op" value="op3">op3<br>
+        </label>
+        <br>
+        <input type="submit" name="enviar" value="Enviando">
+    </form>
+
+
+</body></html>

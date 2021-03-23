@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="elementosTag">
+            <h3>Modificacion tamaño texto</h3>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the1500s, when an unknown printer íook a galley of type and scrambled
+            it to make a type specimen book
+            </p>
+            <p>
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout
+            </p>
+            <p>
+            There are many variations of passages of Lorem Ipsum available, but the
+            majority have suffered alteration in some form, by injected humour, or
+            randomised words which don't look even slightly believable
+            </p>
+            <p>
+            Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+            Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written
+            in 45 BC
+            </p>
+        </div>
+       
+        <span>Seleccionar Tamaño de la fuente:</span>
+        <select id="cboSize">
+            <option value="1">No la ves</option>
+            <option value="2">SuperPequeña</option>
+            <option value="10">Pequeña</option>
+            <option value="20">Mediana</option>
+            <option value="30">Grande</option>
+            <option value="40">Enorme</option>
+            <option value="80">Es demasiado</option>
+        </select>
+        <span>Seleccionar el color de la fuente:</span>
+        <select id="cbocolor">
+            <option value="RED">Rojo</option>
+            <option value="GREEN">Verde</option>
+            <option value="YELLOW">Amarillo</option>
+            <option value="BLACK">Negro</option>
+            <option value="BLUE">Azul</option>
+        </select>
+        <script>
+            document.getElementById("cboSize").addEventListener('change',modificarSize,false);
+
+            function modificarSize(){
+                var n = document.getElementById('cboSize').value;
+                document.getElementById('elementosTag').style.fontSize = n;
+            }
+
+            document.getElementById("cbocolor").addEventListener('change',modificarColor,false);
+
+            function modificarColor(){
+                //otra forma de hacerlo mas rapido
+                var c = this.value;
+                document.getElementById('elementosTag').setAttribute("style","color:"+c);
+            }
+
+        </script>    
+    </body>
+</html>

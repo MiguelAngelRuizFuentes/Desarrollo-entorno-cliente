@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <form method="POST" action="envio.html" onsubmit="return validar(this);" id="form">
+        <input type="text" name="nombre" id="usuario"/> Usuario
+        <br><br>
+        <input type="password" name="contra" id="contra"/> Contraseña
+        <br>
+        <p>AFILIADO</p>
+        <input name="afiliado" type="radio" value="si"/> Si 
+        <br>
+        <input name="afiliado" type="radio" value="no"/> No 
+        <br><br>
+        <select name="valor" id="valor"> 
+            <option value="selec">- Selecciona un valor -</option>
+            <option value="v1">Valor 1</option>
+            <option value="v2">Valor 2</option>
+            <option value="v3">Valor 3</option>
+        </select> 
+        <p>Marca al menos dos opciones</p>
+        <input name="1" type="checkbox" value="OP1" id="opciones"/> OP1
+        <br>
+        <input name="2" type="checkbox" value="OP2" id="opciones"/> OP2
+        <br>
+        <input name="3" type="checkbox" value="OP3" id="opciones"/> OP3
+        <br>
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+
+    <script>
+        function validar(e){
+            var comprobar = true;
+            //Validar nombre
+            var usuario= document.getElementById("usuario").value;
+            if(usuario.length == 0 && !(/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(usuario)) || usuario == null){
+                alert("No has escrito nada en el campo Usuario");
+                comprobar = false;
+            }
+
+            //Validar Contraseña
+            var password = document.getElementById("contra").value;
+            if(password.length == 0 || password == null){
+                alert("No has escrito nada en el campo Contraseña");
+                comprobar = false;
+            }
+            if(password.length < 8){
+                alert("Contraseña demasiado corta");
+                comprobar = false;
+            }
+            if(password.length > 32){
+                alert("Contraseña demasiado larga");
+                comprobar = false;
+            }
+            //Radio
+            var form = document.getElementsById("form");
+            var selected_radio = false;
+            for(var i=0; i<form.length; i++){
+                if(form[i].checked && form[i].type == "radio"){
+                    selected_radio = true;
+                    break;
+                }
+            }
+            if(!selected_radio){
+                alert("No has seleccionado ninguna opcion del campo afiliado");
+                comprobar = false;
+            }
+            
+            //Select 
+            var checkbox = document.getElementById("opciones").selectedIndex;
+
+            if(checkbox == null || checkbox == 0){
+                alert("No has seleccionado ninguna opcion");
+                comprobar = false;
+            }
+            //Checkbox
+            var checkboxs = document.getElementById("form");
+            var contador =0;
+            for( var i=0; i<checkboxs.elements.length; i++){
+                var elemento= checkboxs.elements[i];
+                if(elemento.type == "checkbox"){
+                    if(elemento.checked){
+                        contador++;
+                    }
+                }
+            }
+
+            if(contador == 0){
+                alert("No has seleccionado ninguna opcion");
+                comprobar = false;
+            }else if( contador<2){
+                alert("Debes seleccionar otra opcion. Son 2 opciones");
+                comprobar = false;
+            }
+            return comprobar;           
+        }
+    </script>
+</body>
+</html>

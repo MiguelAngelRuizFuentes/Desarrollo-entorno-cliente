@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 3x02</title>
+    </head>
+    <body>
+        <div id="lista">
+            <h3>Lista dinámica</h3>
+            <ul></ul>
+            <hr/>
+        </div>
+        <form>
+            <label for="texto">Texto:</label>
+            <input id="texto" type="text" size="40/">
+            <input type="button" onclick="addElemento(getElementById('texto').value);" value="Añadir">
+        </form>
+        <script>
+
+            function addElemento(texto){
+                var capa = document.getElementById("lista");
+                var ul = document.createElement("ul");
+                ul.innerHTML = texto;
+                capa.appendChild(ul);
+            }
+            
+        </script>
+    </body>
+</html

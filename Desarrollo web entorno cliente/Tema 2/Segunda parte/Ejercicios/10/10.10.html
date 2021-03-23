@@ -1,0 +1,24 @@
+<html>
+  <head>
+      <title>10.10</title>
+</head>
+<body>
+    <canvas id="canvas" width="300" height="150"></canvas>
+ 
+    <script type="text/javascript">
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        texto="Hola mundo"; //texto de prueba
+        ctx.beginPath() //iniciar ruta
+        ctx.strokeStyle="black"; //color externo
+        ctx.fillStyle="black"; //color de relleno
+        ctx.font="bold 20px arial"; //estilo de texto
+        ctx.fillText(texto,10,80); //texto con método fill
+        ctx.strokeText(texto,10,30); //texto con método stroke
+        
+        
+
+   </script>
+  
+ </body>
+</html>

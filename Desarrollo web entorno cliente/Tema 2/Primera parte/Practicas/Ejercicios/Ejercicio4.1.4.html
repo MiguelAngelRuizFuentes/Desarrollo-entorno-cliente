@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ejercicio 4.1.4</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            
+            var nombre = window.prompt("Cual es tu nombre");
+            var apellidos = window.prompt("Cual es tu apellido");
+            var salario = window.prompt("Cual es tu salario");
+            var edad = window.prompt("Cual es tu edad");
+            
+            
+            document.write("El nombre es: "+nombre);
+            
+            
+            
+            var precio_kilometro=0;
+            var vehiculo = window.prompt("Que vehiculo tienes?");
+            var kms_recorridos =  window.prompt("Cuantos kilometros has recorrido?");
+            var litros_consumidos= window.prompt("Cuantos litros has consumido?");
+            var total = 0;
+            
+            if(vehiculo=="coche"){
+                precio_kilometro=0.10;
+            }else if(vehiculo=="moto"){
+                precio_kilometro=0.20;
+            }else if(vehiculo=="autobus"){
+                precio_kilometro=0.50;
+            }
+            
+            if(litros_consumidos>=0&&litros_consumidos<=100){
+                total =(precio_kilometro*kms_recorridos)+1;
+            }else{
+                total =(precio_kilometro*kms_recorridos)+2 ;
+            }
+            
+            document.write("El precio total es: "+total+"€");
+   
+        </script>
+    </body>
+</html>

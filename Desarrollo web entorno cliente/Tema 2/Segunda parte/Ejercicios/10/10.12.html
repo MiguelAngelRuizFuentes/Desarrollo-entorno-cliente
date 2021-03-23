@@ -1,0 +1,38 @@
+<html>
+  <head>
+      <title>10.11</title>
+</head>
+<body>
+    <canvas id="milienzo" width="800" height="500"></canvas>
+ 
+    <script type="text/javascript">
+       window.onload=carga;
+        
+        function carga(){
+            var milienzo = document.getElementById('milienzo');
+            
+            var lienzo = milienzo.getContext('2d');
+            
+            var img = new Image();
+            img.src = 'fondo.jpg';
+            img.onload = function(){
+                lienzo.drawImage(img,0,0,400,300);
+                lienzo.beginPath();
+                lienzo.strokeStyle = "red";
+                lienzo.moveTo(85,100);
+                lienzo.lineTo(107,80);
+                lienzo.lineTo(129,100);
+                lienzo.lineTo(151,120);
+                lienzo.lineTo(173,100);
+                lienzo.lineTo(195,180);
+                lienzo.lineTo(220,40);
+                lienzo.stroke();
+            }
+        }
+        
+        
+
+   </script>
+  
+ </body>
+</html>

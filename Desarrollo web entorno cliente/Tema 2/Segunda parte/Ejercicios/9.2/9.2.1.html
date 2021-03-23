@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio 9.2.1</title>
+    </head>
+    <body>
+        
+        <script>
+          var alumno ={
+              nombre:"Juan",
+              apellido:"Ramirez",
+              edad:25,
+              clase:"2A"
+          };
+          var x,txt = "";
+          for(x in alumno){
+              txt+=alumno[x]+"</br>";
+          };
+          document.write(txt);
+            
+          delete alumno.edad;
+            
+          /*for(x in alumno){
+              txt+=alumno[x]+"</br>";
+          };
+          document.write(txt);*/
+            
+        </script>
+        
+      
+        
+    </body>
+</html>
